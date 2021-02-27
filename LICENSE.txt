@@ -1,0 +1,7 @@
+Copyright license
+
+This style code is based on code uploaded to userstyles.org by Sam Miller, who has furnished it under the Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC 4.0) license.
+
+For the sake of simplicity, any modifications (copyright Ian Gregory) made to the original code are also provided to you under the terms of this (CC-BY-NC 4.0) license.
+
+Please refer here for more about this license: https://creativecommons.org/licenses/by-nc/4.0/
