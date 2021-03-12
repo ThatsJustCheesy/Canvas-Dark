@@ -3,13 +3,20 @@
 @namespace      igregory.ca
 @author         Sam Miller, Ian Gregory
 @description    `Dark mode for Canvas.`
-@version        1.0.0
+@version        2.0.0
 @homepageURL https://github.com/ThatsJustCheesy/Canvas-Dark
 @updateURL   https://github.com/ThatsJustCheesy/Canvas-Dark/raw/master/canvas_dark.user.css
 @license        CC-BY-NC-4.0
 @preprocessor   uso
-@advanced color color0 "Choose a main color:" #AFD089
-@advanced color color1 "Choose a darker color:" #415b22
+@var color background-color "Background color" #2b2b2b
+@var color secondary-background-color "Secondary background color" #373737
+@var color module-list-background-color "Module list background color" #272727
+@var color nav-list-hover-color "Nav list hover background color" #464646
+@var color module-list-hover-color "Module list hover background color" #1e1e1e
+@var color text-color "Primary text color" #c3c3c3
+@var color background-theme-color "Theme background color" #415b22
+@var color background-light-theme-color "Theme lighter background color" #566643
+@var color text-theme-color "Theme text color" #AFD089
 
 ==/UserStyle== */
 @-moz-document domain("q.utoronto.ca") {
@@ -18,19 +25,22 @@ p{
 }
 body {
     min-height: 100vh;
-    background: #2b2b2b;
-    color: #c3c3c3;
+    background: /*[[background-color]]*/;
+    color: /*[[text-color]]*/;
     font-weight: 300;
+}
+table {
+    background: /*[[background-color]]*/ !important;
 }
 .ic-Dashboard-header__layout {
     background: #2b2b2b;
     border: none;
 }
 .ic-DashboardCard {
-    background: #373737;
+    background: /*[[secondary-background-color]]*/;
 }
 .ic-DashboardCard__header_content {
-    background: #373737;
+    background: /*[[secondary-background-color]]*/;
 }
 DashboardCard__header-term {
     color: #cacaca;
@@ -43,10 +53,10 @@ a {
     transition: 0.3s all;
 }
 .ToDoSidebarItem__Icon {
-    fill: #c3c3c3 !important;
+    fill: /*[[text-color]]*/ !important;
 }
 .ToDoSidebarItem__Title .eHiXd_brAJ .eHiXd_caGd {
-    color: /*[[color0]]*/ !important;
+    color: /*[[text-theme-color]]*/ !important;
 }
 .ic-DashboardCard__header-subtitle, .ic-DashboardCard__header-term {
     color: #cacaca;
@@ -56,7 +66,7 @@ a {
     color: #fff !important;
 }
 #right-side .button-sidebar-wide {
-    border-color: #44c8f5;
+    border-color: /*[[background-light-theme-color]]*/;
 }
 .ic-DashboardCard__header-button {
     background-color: #0000 !important;
@@ -75,7 +85,7 @@ a {
     background-color: #464646;
 }
 .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
-    background: #373737;
+    background: /*[[background-color]]*/;
 }
 .header-bar {
     border-bottom: none;
@@ -85,20 +95,21 @@ a {
     background-color: #333;
 }
 .item-group-container .item-group-condensed {
-    border-bottom: 1px dashed #44c8f5;
+    border-bottom: 1px dashed /*[[background-light-theme-color]]*/;
 }
 .ic-app-course-nav-toggle {
     border: none;
 }
 .ig-header {
     background-color: #333 !important;
+    border: none !important;
 }
 .ig-header .ig-header-title {
     color: #fff;
     text-shadow: none;
 }
 .ig-header .name {
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
     text-shadow: none;
 }
 .ig-details__item {
@@ -111,22 +122,19 @@ a {
     background: #333;
     border: none;
 }
-.ic-app-course-menu #section-tabs-header-subtitle {
-    color: #44c8f5;
-}
 .list-view>ul>li>a, .list-view>nav>ul>li>a {
     color: #e0e0e0 !important;
 }
 .list-view>ul>li>a:hover, .list-view>ul>li>a:focus, .list-view>nav>ul>li>a:hover, .list-view>nav>ul>li>a:focus {
-    background: #464646;
+    background: /*[[nav-list-hover-color]]*/;
 }
 .item-group-condensed .ig-row {
-    background: #272727;
-    border-bottom: 1px solid #44c8f5;
+    background: /*[[module-list-background-color]]*/;
+    border-bottom: 1px solid /*[[background-light-theme-color]]*/;
 }
 .ig-list .ig-row {
     border-color: #151414;
-    background: #333;
+    background: /*[[module-list-background-color]]*/;
 }
 .item-group-condensed .ig-row {
     background: #272727;
@@ -136,27 +144,27 @@ a {
     border-top: 1px solid #151414;
 }
 .ig-list .ig-row:hover {
-    background-color: #1b1b1b;
+    background-color: /*[[module-list-hover-color]]*/;
 }
 #breadcrumbs>ul>li {
     background: #2b2b2b;
 }
 .ic-Action-header__Heading {
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
 }
 .user_content, .mceContentBody {
     color: #e3e3e3;
 }
 .toolbarView .headerBar {
     background: #2b2b2b;
-    border: 1px solid #44c8f5;
+    border: 1px solid /*[[background-light-theme-color]]*/;
 }
 .topic .entry-content {
-    border-left: 1px solid #44c8f5;
-    border-right: 1px solid #44c8f5;
+    border-left: 1px solid /*[[background-light-theme-color]]*/;
+    border-right: 1px solid /*[[background-light-theme-color]]*/;
 }
 .discussion-header-content {
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
 }
 #syllabus tr.date.date_passed td, #syllabus tr.date.date_passed th {
     background-color: #2b2b2b;
@@ -224,14 +232,18 @@ table.summary td, table.summary tbody th {
 #undated-events .event {
     background-color: #2b2b2b;
 }
-#minical {
+.mini_calendar {
     background-color: #1d1d1d;
 }
-#minical .fc-toolbar h2, #minical .fc-toolbar .h2 {
+.mini_calendar .fc-toolbar h2, #minical .fc-toolbar .h2 {
     color: #d8d8d8;
 }
-#minical .fc-widget-content {
+.mini_calendar .fc-widget-content {
     color: #fff;
+}
+.mini_calendar .today * {
+    background: /*[[background-light-theme-color]]*/;
+    border: #444;
 }
 .btn-group>.btn:hover, .btn-group>.btn:focus, .btn-group>.btn:active, .btn-group>.btn.active {
     background: #7d7d7d;
@@ -285,10 +297,17 @@ body.primary-nav-expanded .tray-with-space-for-global-nav {
     backdrop-filter: blur(3px);
 }
 .author, .username, .message-participants-toggle, .cjUyb_bGBk, .eHiXd_bGBk, .element_toggler, ._xolwpq, .fc-day-header, .navigation_title_text, .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link .menu-item__text, .gData td a, .ellipsible, .ef-big-icon, .icon-publish, .btn-add-folder, .btn-upload, .icon-upload, .icon-plus, .icon-assignment, .syllabus_assignment a, .mini-cal-month-and-year, .student_assignment .title a, .icon-user, .available-users a, .ui-state-active .icon-user{
-    color: /*[[color0]]*/ !important;
+    color: /*[[text-theme-color]]*/ !important;
+    
+}
+.ef-big-icon {
+    filter: brightness(0.8);
+}
+.ef-big-icon.mimeClass-folder {
+    filter: brightness(1.8);
 }
 .date, .cjUyb_pEgL, .fCrpb_bGBk, .course-list-favorite-icon, #section-tabs-header-subtitle{
-    color: /*[[color1]]*/ !important;
+    color: /*[[text-theme-color]]*/ !important;
 }
 .subject, #calendar_event_title, #calendar_event_date, #calendar_event_start_time, #calendar_event_end_time, #calendar_event_location_name, #calendar_event_context, #planner_note_title, #planner_note_date, #planner_note_time, #planner_note_context, #details_textarea, .title, .mce-content-body, .input-block-level, .date_field, .time_field, #calendar_event_location_address, p, .fTsnK_bGBk, #duplicate_interval, #duplicate_count, .fc-day, .eHiXd_doqw .eHiXd_caGd, .compose-message-subject, textarea, .ac-input-box, .ac-input, i, .cjUyb_ycrn, .eoNrR_blJt, .sJGfW_blJt, .day_number, .dLdjY_bDLZ, #add_discussion, .deUoG_uUeq, .cDMBL_ssMr, .dNoYT_bGBk, .yyQPt_blJt, .eHiXd_caGd, .new-conference-btn .icon-plus, .new-conference-btn,#web_conference_title, #web_conference_conference_type, #web_conference_duration, legend, #collaboration_title{
     color: #bbb !important;
@@ -300,20 +319,23 @@ body.primary-nav-expanded .tray-with-space-for-global-nav {
     fill:#ccc !important;
 }
 .message-item-view, .message-header, .span8, .message-detail, .span4, .message-list-scroller, .panel, .btn, #conversation_filter, #conversation_filter_select, .ac-input-box, .Button, hr[role="presentation"], .context-list-toggle-box[aria-checked="true"], .event-details-content, .czbXA_bGBk, .dXATK_bGBk[aria-selected="true"], .eHiXd_doqw, #my_courses_table, .course-list-table-row, hr, .ac-token, textarea, .read-state::before, .ef-header, div[role="tablist"] div[role="tab"], legend, .border{
-    border: #373737 !important;
+    border: /*[[secondary-background-color]]*/ !important;
+}
+.course-list-table-row, .course-list-unpublished-course-row {
+    background: /*[[background-color]]*/ !important;
 }
 .ic-app-nav-toggle-and-crumbs, .ef-directory-header, .ef-folder-content, .ef-main, .todo-list-header, td:not(.fc-day), #edit_calendar_event_form_holder, #edit_planner_note_form_holder, .headerBar, .entry-content, .stream-category, #announcement-details, .ic-announcement-row, .ic-item-row, .item-group-condensed{
     border:#444 !important;
 }
 
 .ic-app-header__main-navigation, .ic-app-header__menu-list-link--nav-toggle, .al-trigger, .context-list-toggle-box[aria-checked="true"], .ui-tabs-nav, ._1iyfu1y:hover, .dXATK_bGBk[aria-selected="true"], .eHiXd_doqw, .active a, button[data-event="editProfile"], button[data-event="cancelEditProfile"], svg[name="IconCheckMark"], .yyQPt_cjfS .yyQPt_cSXm, div[role="tablist"] div[role="tab"][aria-selected="true"], div[role="tablist"] div[role="tab"]:hover, #add_discussion, #submit_discussion_setting, #apply_select_menus, .new-conference-btn{
-    background: /*[[color1]]*/ !important;
+    background: /*[[background-theme-color]]*/ !important;
 }
 .fNHEA_cSXm{
     background:#393939 !important;
 }
 .fc-today, .ac-token, #umVgCsyfGn6y:checked .yyQPt_cSXm, .message-count{
-    background:#502A2E !important;
+    background:/*[[background-theme-color]]*/ !important;
 }
 .message-detail-kyle-menu, .Button--icon-action, .stream-category, .collectionViewItems, .box-with-header{
     border-radius:3px !important;
@@ -342,6 +364,9 @@ body.primary-nav-expanded .tray-with-space-for-global-nav {
 .fNHEA_cSXm, .MlJlv_caGd img, #uYGyDjfTmjj6, .ic-section-tooltip button, .ctf-emoji-button{
     filter: invert(1) !important;
 }
+.ic-section-tooltip {
+    color: /*[[text-color]]*/ !important;
+}
 .menu-item__text{
     font-weight:700;
 }
@@ -349,7 +374,7 @@ textarea{
     background: #2a2a2a !important;
 }
 .ic-app-header__menu-list-item--active {
-    background: #777 !important;
+    background: /*[[background-color]]*/ !important;
 }
 h3 a, h3 a:hover {
     color: #fff !important;
@@ -361,7 +386,7 @@ h3 a, h3 a:hover {
     border: none;
 }
 .ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-icon-svg {
-    fill: #5a7e30 !important;
+    fill: /*[[text-theme-color]]*/ !important;
 }
 .item-group-condensed .ig-list li:first-child .ig-row.ig-row-empty, .item-group-condensed .ig-list li:first-of-type .ig-row.ig-row-empty, .item-group-condensed .first_visible .ig-row.ig-row-empty {
     border-top: none;
@@ -382,7 +407,7 @@ h3 a, h3 a:hover {
 }
 
 .feature-flag {
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
 }
 i[class*=icon-], i[class^=icon-] {
     color: #fff;
@@ -434,21 +459,21 @@ textarea, input[type="text"], input[type="password"], input[type="datetime"], in
 }
 select {
     background-color: #464646;
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
 }
 [dir="ltr"] .bwOAM_cwos.bwOAM_EMjX, [dir="ltr"] input[type].bwOAM_cwos.bwOAM_EMjX {
     background: #464646;
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
 }
 [dir="ltr"] .bwOAM_cwos.bwOAM_EMjX, [dir="ltr"] input[type].bwOAM_cwos.bwOAM_EMjX::placeholder {
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
 }
 .esvoZ_drOs {
     color: #c7cdd1;
 }
 select.ic-Input, textarea.ic-Input, input[type="text"].ic-Input, input[type="password"].ic-Input, input[type="datetime"].ic-Input, input[type="datetime-local"].ic-Input, input[type="date"].ic-Input, input[type="month"].ic-Input, input[type="time"].ic-Input, input[type="week"].ic-Input, input[type="number"].ic-Input, input[type="email"].ic-Input, input[type="url"].ic-Input, input[type="search"].ic-Input, input[type="tel"].ic-Input, input[type="color"].ic-Input, .uneditable-input.ic-Input {
     background: #232323;
-    color: #c3c3c3;
+    color: /*[[text-color]]*/;
 }webkit-scrollbar {
   width: 10px;
 }
