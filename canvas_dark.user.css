@@ -3,7 +3,7 @@
 @namespace      igregory.ca
 @author         Sam Miller, Ian Gregory
 @description    `Dark mode for Canvas.`
-@version        2.0.0
+@version        2.1.0
 @homepageURL https://github.com/ThatsJustCheesy/Canvas-Dark
 @updateURL   https://github.com/ThatsJustCheesy/Canvas-Dark/raw/master/canvas_dark.user.css
 @license        CC-BY-NC-4.0
@@ -14,6 +14,7 @@
 @var color nav-list-hover-color "Nav list hover background color" #464646
 @var color module-list-hover-color "Module list hover background color" #1e1e1e
 @var color text-color "Primary text color" #c3c3c3
+@var color title-text-color "Title text color" #ccc
 @var color background-theme-color "Theme background color" #415b22
 @var color background-light-theme-color "Theme lighter background color" #566643
 @var color text-theme-color "Theme text color" #AFD089
@@ -31,6 +32,14 @@ body {
 }
 table {
     background: /*[[background-color]]*/ !important;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: /*[[title-text-color]]*/;
+}
+/* I am not sure why this is required, but it is (to make announcement section text
+   the same color as the other text). */
+span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
+    filter: invert(1);
 }
 .ic-Dashboard-header__layout {
     background: #2b2b2b;
