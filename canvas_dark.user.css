@@ -3,7 +3,7 @@
 @namespace      igregory.ca
 @author         Sam Miller, Ian Gregory
 @description    `Dark mode for Canvas.`
-@version        2.1.1
+@version        2.1.2
 @homepageURL https://github.com/ThatsJustCheesy/Canvas-Dark
 @updateURL   https://github.com/ThatsJustCheesy/Canvas-Dark/raw/master/canvas_dark.user.css
 @license        CC-BY-NC-4.0
@@ -38,7 +38,7 @@ table {
 }
 /* I am not sure why this is required, but it is (to make announcement section text
    the same color as the other text). */
-span.enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
+.fOyUs_bGBk.eHiXd_bGBk.eHiXd_brAJ.eHiXd_ycrn.eHiXd_bNlk.eHiXd_cuTS .enRcg_bGBk.enRcg_doqw.enRcg_eQnG {
     filter: invert(1);
 }
 .ic-Dashboard-header__layout {
